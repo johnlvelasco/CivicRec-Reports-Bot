@@ -28,7 +28,7 @@ namespace CivicRecBot
 
                 Thread.Sleep(1000);
                 IWebElement password = driver.FindElement(By.Id("login-password"));
-                email.SendKeys(signIn[1]);
+                password.SendKeys(signIn[1]);
                 //password.SendKeys("dog"); //could change for a variable, or user input in personal window
             }
             catch (Exception e)
@@ -39,7 +39,7 @@ namespace CivicRecBot
                 Thread.Sleep(5000);
                 throw new Exception("" + e);
             }
-            Thread.Sleep(3000);
+            Thread.Sleep(55000);
             driver.Close();
             driver.Quit();
             Environment.Exit(0);
@@ -50,7 +50,7 @@ namespace CivicRecBot
             try
             {
                 string [] signIn = new string[2]; 
-                using (StreamReader sr = new StreamReader("login.txt"))
+                using (StreamReader sr = new StreamReader("C:/Users/johnv/source/personal project repos/CivicRecBot/CivicRecBot/Data/login.txt"))
                 {
                     string username = sr.ReadLine().Trim();
                     signIn[0] = username;
@@ -61,7 +61,7 @@ namespace CivicRecBot
             }
             catch (Exception e)
             {
-                throw new Exception("File could not be read - " + e);
+                throw new Exception("\n\nFile could not be read - " + e);
             }
         }
 
