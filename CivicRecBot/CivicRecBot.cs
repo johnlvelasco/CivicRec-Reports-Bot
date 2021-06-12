@@ -39,7 +39,7 @@ namespace CivicRecBot
                 Thread.Sleep(5000);
                 throw new Exception("" + e);
             }
-            Thread.Sleep(55000);
+            Thread.Sleep(10000);
             driver.Close();
             driver.Quit();
             Environment.Exit(0);
